@@ -1,9 +1,8 @@
+import { Main } from 'components/Main'
 import React from 'react'
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <Main />
   )
 }
