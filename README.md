@@ -9,8 +9,11 @@ If I had more time, I would work on paginating the data so that it doesn't retur
 
 ## View it live
 
+Deployed frontend: 
+https://incandescent-lily-e46341.netlify.app/
+
 Deployed API:
 https://project-express-api-jonj3fewvq-lz.a.run.app/
 
-Deployed frontend: 
-https://incandescent-lily-e46341.netlify.app/
+Github Repo for backend: 
+https://github.com/beemailley/project-express-api/
