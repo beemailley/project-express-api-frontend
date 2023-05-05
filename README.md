@@ -1,19 +1,16 @@
-# Technigo React Starter App
+# Project Express API
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+The project for this week was to create a RESTful API using Express. The API needed to have at least two endpoints - one that would return an array of data, and one that was capable of returning a specific/single item. There was also the option to accept filters via query parameters which I included. 
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## The Problem
+I started by planning how and what I would include in the project from the requirements and stretch goals. I then moved onto reviewing the existing examples and codealong code to understand the level of complexity for the data set that would be used for the API. Then, I identified the data I wanted to use - my own reading data from Story Graph. I downloaded my data, cleaned up the data set to make it more useable. When I began coding I wrote one endpoint at a time, testing it before moving to the next. Once my API was functioning, I deployed the backend, and began working on the frontend. I chose to use the frontend as a way to share the API documentation, and example data from different query values. 
 
-## Usage
+If I had more time, I would work on paginating the data so that it doesn't return more than 50 results at a time. I would also troubleshoot the issue with the background on the frontend. The background gets distorted when the datasets are long.
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## View it live
 
-Alternatively, if you don't want a new git repo on your account;
+Deployed API:
+https://project-express-api-jonj3fewvq-lz.a.run.app/
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+Deployed frontend: 
+https://incandescent-lily-e46341.netlify.app/
