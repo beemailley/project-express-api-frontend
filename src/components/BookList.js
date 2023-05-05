@@ -1,9 +1,12 @@
+import { Card } from 'globalstyles/Card.styles';
+import { CenteredText, SecondaryHeader } from 'globalstyles/Text.styles';
+import { Wrapper } from 'globalstyles/Wrapper.styles';
 import React, { useState, useEffect } from 'react';
 
 export const BookList = () => {
   const [booklist, setBooklist] = useState([])
   const [loading, setLoading] = useState(false)
-  const [readStatus, setReadStatus] = useState('')
+  const [readStatus, setReadStatus] = useState('currently-reading')
 
   const handleListSelection = (event) => {
     setReadStatus(event.target.value)
@@ -19,12 +22,12 @@ export const BookList = () => {
       .finally(() => { setLoading(false) })
   }, [readStatus])
   return (
-    <div>
+    <Wrapper>
       {loading && (<p>loading</p>)}
       {!loading && (
         <>
-          <h1>Book List</h1>
-          <p>Select the read-status for the books you want to see:</p>
+          <SecondaryHeader>Book List</SecondaryHeader>
+          <CenteredText>Select the read-status for the books you want to see:</CenteredText>
           <select onChange={handleListSelection}>
             <option value="">Please Select One:</option>
             <option value="">All Books</option>
@@ -33,20 +36,19 @@ export const BookList = () => {
             <option value="to-read">To Read</option>
             <option value="did-not-finish">DNFed</option>
           </select>
-          <p>There are {booklist.length} books in this category.</p>
-          <section>
+          <CenteredText>There are {booklist.length} books in this category.</CenteredText>
+          <>
             {booklist.map((book) => {
               return (
-                <div key={book.ISBN}>
+                <Card key={book.ISBN}>
                   <p>{book.Title}</p>
                   <p>By: {book.Author}</p>
-                  <p>-----------------</p>
-                </div>
+                </Card>
               )
             })}
-          </section>
+          </>
         </>
       )}
-    </div>
+    </Wrapper>
   )
 }

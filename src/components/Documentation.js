@@ -1,14 +1,17 @@
 /* eslint-disable max-len */
+import { EndpointHeader, Link, List, SecondaryHeader } from 'globalstyles/Text.styles';
+import { Wrapper } from 'globalstyles/Wrapper.styles';
 import React from 'react';
 
 export const Documentation = () => {
   return (
-    <div>
-      <h1>Documentation</h1>
+    <Wrapper>
+      <SecondaryHeader>Documentation</SecondaryHeader>
       <p>Bridget&apos;s Books is an API that allows users to fetch data about which books Bridget has read, wants to read, is currently reading, or did not finish.</p>
 
-      <h3>/bridgetsbooks</h3>
-      <ul>
+      <EndpointHeader>/bridgetsbooks</EndpointHeader>
+
+      <List>
         <li>methods: GET </li>
         <li>Accepts the following query params:</li>
         <ul>
@@ -30,13 +33,15 @@ export const Documentation = () => {
             <li>Example: /bridgetsbooks?author=Amrou Al-Kadhi</li>
           </ul>
         </ul>
-      </ul>
-      <h3>/bridgetsbooks/:isbn </h3>
-      <ul>
+        <li>Use <Link href="https://project-express-api-jonj3fewvq-lz.a.run.app/bridgetsbooks">/bridgetsbooks</Link> </li>
+      </List>
+      <EndpointHeader>/bridgetsbooks/:isbn </EndpointHeader>
+      <List>
         <li>methods: GET </li>
-        <li>matches exact ISBN numbers</li>
-      </ul>
+        <li>Matches exact ISBN numbers.</li>
+        <li>Use <Link href="https://project-express-api-jonj3fewvq-lz.a.run.app/bridgetsbooks/:isbn">/bridgetsbooks/:isbn</Link> </li>
+      </List>
 
-    </div>
+    </Wrapper>
   )
 }
